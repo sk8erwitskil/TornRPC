@@ -15,6 +15,12 @@ are registered using ```server.register_async()```.
 For more detailed info see the docstring
 for TornRPCClient and TornRPCServer.
 
+### install ###
+```
+pip install TornRPC
+```
+See https://pypi.python.org/pypi/TornRPC
+
 ### example server code ###
 ```
 from tornado import gen
