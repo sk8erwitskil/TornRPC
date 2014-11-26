@@ -41,6 +41,7 @@ server.register(test)
 server.register_async(testasync)
 server.start(8080)
 ```
+
 ### example client code ###
 ```python
 from tornrpc.client import TornRPCClient
@@ -49,3 +50,8 @@ client = TornRPCClient('localhost:8080')
 print client.test('hi')
 print client.testasync('hi')
 ```
+
+### Features ###
+- auto-complete/tab-completion of remote methods in the client. Useful in iPython.
+- backed by tornado. very quick, asynchronous framework able to handle thousands of concurent connections
+- ability to register async and non-async functions
