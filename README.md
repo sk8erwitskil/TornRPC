@@ -57,7 +57,7 @@ print client.test('hi')
 print client.testasync('hi')
 ```
 
-### Features ###
+### features ###
 - auto-complete/tab-completion of remote methods in the client. Useful in iPython.
 - backed by tornado. very quick, asynchronous framework able to handle thousands of concurent connections
 - ability to register async and non-async functions
