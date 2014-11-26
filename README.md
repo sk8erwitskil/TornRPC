@@ -22,7 +22,7 @@ pip install TornRPC
 See https://pypi.python.org/pypi/TornRPC
 
 ### example server code ###
-```
+```python
 from tornado import gen
 from tornrpc.server import TornRPCServer
 
@@ -39,7 +39,7 @@ server.register_async(testasync)
 server.start(8080)
 ```
 ### example client code ###
-```
+```python
 from tornrpc.client import TornRPCClient
 
 client = TornRPCClient('localhost:8080')
