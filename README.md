@@ -9,15 +9,14 @@ with the TornRPCServer. The below example
 shows both. The only difference in the
 framework is how you register it.
 Normal functions are registered using
-"server.register()". Async functions
-are registered using "server.register_async()".
+```server.register()```. Async functions
+are registered using ```server.register_async()```.
 
 For more detailed info see the docstring
 for TornRPCClient and TornRPCServer.
 
-Example:
 ### example server code ###
-
+```
 from tornado import gen
 from tornrpc.server import TornRPCServer
 
@@ -32,11 +31,12 @@ server = TornRPCServer()
 server.register(test)
 server.register_async(testasync)
 server.start(8080)
-
+```
 ### example client code ###
-
+```
 from tornrpc.client import TornRPCClient
 
 client = TornRPCClient('localhost:8080')
 client.test('hi')
 client.testasync('hi')
+```
