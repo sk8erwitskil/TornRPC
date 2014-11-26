@@ -43,6 +43,6 @@ server.start(8080)
 from tornrpc.client import TornRPCClient
 
 client = TornRPCClient('localhost:8080')
-client.test('hi')
-client.testasync('hi')
+print client.test('hi')
+print client.testasync('hi')
 ```
