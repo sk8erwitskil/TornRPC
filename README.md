@@ -13,8 +13,9 @@ Normal functions are registered using
 ```server.register()```. Async functions
 are registered using ```server.register_async()```.
 
-For more detailed info see the docstring
-for TornRPCClient and TornRPCServer.
+Each registered function will be turned into an HTTP endpoint on the server that you can manually curl yourself. See example server code below for info.
+
+For more detailed info see the docstring for TornRPCClient and TornRPCServer.
 
 For a real example of a server using this see https://github.com/sk8erwitskil/KVServer/blob/master/server.py
 
@@ -40,6 +41,11 @@ server = TornRPCServer()
 server.register(test)
 server.register_async(testasync)
 server.start(8080)
+```
+
+These registered functions will turn into HTTP endpoints. You can manually curl them like this:
+```
+curl -H "User-Agent: TornRPC" -X GET -d "arg=hi%20there" http://localhost:8080/testasync
 ```
 
 ### example client code ###
