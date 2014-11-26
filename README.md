@@ -1,3 +1,4 @@
+### TornRPC ###
 A tornado RPC library.
 
 This RPC framework uses tornado
@@ -14,6 +15,8 @@ are registered using ```server.register_async()```.
 
 For more detailed info see the docstring
 for TornRPCClient and TornRPCServer.
+
+For a real example of a server using this see https://github.com/sk8erwitskil/KVServer/blob/master/server.py
 
 ### install ###
 ```
